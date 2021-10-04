@@ -74,8 +74,8 @@ namespace AutomateNotepad
             // Find submenu item: File Menu > Save As
             FindSubmenuItem(fileMenuElement, "Save As...");
 
-            // Enter file name
-            string directoryPath = "D:\\Users\\chadjones\\Desktop\\";
+            // Enter file name - NOTE: DESIGNATE A DIRECORY PATH ON LINE 78 BEFORE RUNNING THIS PROGRAM
+            string directoryPath = "D:\\Users\\...";
             SendKeys.SendWait(directoryPath + "HelloWorld.txt");
 
             // Save file
