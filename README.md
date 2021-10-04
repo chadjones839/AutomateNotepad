@@ -17,6 +17,8 @@ This is an RPA program built in C# to automate the creation of a new .txt file i
 
 ## Notes
 
+- ***IMPORTANT*** **the string variable directoryPath on line 78 requirs a hard coded file path. Before running this program, designate the file path**
+
 - System.Diagnostics was solely used for the Process Class to locate and open instances of notepad.exe
 
 - System.Windows.Automation namespace was used to locate control types on the desktop. This helped me locate the notepad window after it was opened, menu items, submenu items, and buttons.
