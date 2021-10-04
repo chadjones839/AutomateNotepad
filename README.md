@@ -15,10 +15,15 @@ This is an RPA program built in C# to automate the creation of a new .txt file i
 - [X] Check to make sure file was stored successfully in the specified location.
 - [X] Report task was completed successfully.
 
-## Notes
+## Bugs
 
-- ***IMPORTANT*** **the string variable directoryPath on line 78 requirs a hard coded file path. Before running this program, designate the file path**
+- ***IMPORTANT*** **the string variable directoryPath on line 78 requirs a hard coded file path. Before running this program, designate the file path** 
+ 
+- There is a 5-10 second delay when clicking on the 'Yes' button in the "Confirm Save As" dialog that requires additional work to solve.
 
+- If it is the first time saving "HelloWorld.txt" an exception is thrown in the InvokeClick method because the "Confirm Save As" dialog does not generate. Conditional logic still needs to be added in order to skip this step on the first save.
+
+## Other Notes
 - System.Diagnostics was solely used for the Process Class to locate and open instances of notepad.exe
 
 - System.Windows.Automation namespace was used to locate control types on the desktop. This helped me locate the notepad window after it was opened, menu items, submenu items, and buttons.
@@ -27,6 +32,4 @@ This is an RPA program built in C# to automate the creation of a new .txt file i
 
 - System.IO was used solely for the Directory class to traverse files in the Desktop directory for the save file.
 
-- There is a 5-10 second delay when clicking on the 'Yes' button in the "Confirm Save As" dialog that requires additional work to solve.
 
-- If it is the first time saving "HelloWorld.txt" an exception is thrown in the InvokeClick method because the "Confirm Save As" dialog does not generate. Conditional logic still needs to be added in order to skip this step on the first save.
