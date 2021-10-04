@@ -24,11 +24,13 @@ This is an RPA program built in C# to automate the creation of a new .txt file i
 - If it is the first time saving "HelloWorld.txt" an exception is thrown in the InvokeClick method because the "Confirm Save As" dialog does not generate. Conditional logic still needs to be added in order to skip this step on the first save.
 
 ## Other Notes
+- With more time I would like to organize the code a little better by eliminating some similar code. I have started doing this with the FindSubMenuItem() method.
+
+- The System.Windows.Forms namspace was used specifically for the SendKeys class. I needed a way to send text to the document as well as naming the file. I think there is probably a better way than relying on a namespace that appears to be usually desginated for a forms app, but I wasn't able to find an alternative at this time.
+
 - System.Diagnostics was solely used for the Process Class to locate and open instances of notepad.exe
 
 - System.Windows.Automation namespace was used to locate control types on the desktop. This helped me locate the notepad window after it was opened, menu items, submenu items, and buttons.
-
-- The System.Windows.Forms namspace was used specifically for the SendKeys class. I needed a way to send text to the document as well as naming the file. I think there is probably a better way than relying on a namespace usually desginated for a forms app, but I wasn't able to find an alternative at this time.
 
 - System.IO was used solely for the Directory class to traverse files in the Desktop directory for the save file.
 
